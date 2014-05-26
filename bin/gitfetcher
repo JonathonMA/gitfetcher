@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'gitfetcher'
+
+include Gitfetcher
+
+fetchers = ARGV.select do |path|
+  File.directory? path
+end.map do |path|
+  Fetcher.new(path)
+end
+
+justify = fetchers.map(&:project).map(&:size).max
+
+fetchers.each { |x| x.report_head(justify) }
+fetchers.each { |x| x.watch(justify) }
+fetchers.each &:wait
