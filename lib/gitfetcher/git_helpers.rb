@@ -7,7 +7,7 @@ module Gitfetcher
 
     # returns true if an update occurred
     def git_fetch path
-      Open3.popen2e *%W(git fetch), chdir: path do |stdin, stdout, _wait|
+      Open3.popen2e *%W(git fetch origin), chdir: path do |stdin, stdout, _wait|
         not stdout.read.chomp.empty?
       end
     end

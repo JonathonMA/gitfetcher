@@ -20,7 +20,7 @@ module Gitfetcher
     def time
       [
         Paint["(", :white],
-        Paint["%ar", :cyan],
+        Paint["%ad", :cyan],
         Paint[")", :white],
       ].join
     end
