@@ -1,24 +1,14 @@
 # Gitfetcher
 
-TODO: Write a gem description
+Fetches a bunch of get repositories continuously
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'gitfetcher'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gitfetcher
+    $ rake install
 
 ## Usage
 
-TODO: Write usage instructions here
+    gitfetcher ~/src/repo1 ~/src/repo2
 
 ## Contributing
 
