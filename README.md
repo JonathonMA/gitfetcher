@@ -10,6 +10,12 @@ Fetches a bunch of get repositories continuously
 
     gitfetcher ~/src/repo1 ~/src/repo2
 
+I use the following alias and run it from my home directory in a detached screen session:
+
+    alias cgits='find . -maxdepth 3 -name ".gitfetch" | sed -e "s/.gitfetch$//" | xargs gitfetcher'
+
+When I have a new directory I want to keep up to date, I just touch a .gitfetch file in it's git root
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/gitfetcher/fork )
