@@ -1,6 +1,6 @@
 # Gitfetcher
 
-Fetches a bunch of get repositories continuously
+Fetches a bunch of git repositories continuously
 
 ## Installation
 
